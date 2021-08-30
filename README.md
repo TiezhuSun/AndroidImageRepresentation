@@ -33,11 +33,17 @@ python3 apk2images APK_PATH
 
 ## Models Training and Testing
 
+### Notes:
+
+-  The evaluation is repeated 10 times using the holdout technique.
+-  The training, validation and test hashes are provided in `data_splits` directory.
+-  To run the scripts blow, you need to extract the gray-scale images and color-scale images for goodware and malware applications in `goodware_hashes.txt` and `malware_hashes.txt` using the `apktoimages.py` script.
+
 ### Model based on Gray-scale Image
 
-#### To train and test a model based on grey-scale image, use ```ModelGray.py``` script:
+#### To train and test a model based on <Font color = gray>**gray-scale** </font> image, use ```ModelGray.py``` script:
 
-This script trains the Neural Network using the grey-scale training images, and evaluates its learning using the grey-scale testing dataset. The evaluation is repeated 10 times using the holdout technique. The training, validation and test hashes are provided in `data_splits` directory. To use this script, you need to extract the grey-scale images for goodware and malware applications in `goodware_hashes.txt` and `malware_hashes.txt` using the `apktoimage.py` script.
+This script trains the Neural Network using the gray-scale training images, and evaluates its learning using the gray-scale testing dataset. 
 
 #### INPUTs are:
 
@@ -62,4 +68,31 @@ python3 ModelGray.py -p "dataset_images" -d "results_dir" -t "dex"
 ```
 
 ### Model based on Color-scale Image
+
+#### To train and test a model based on <Font color = brown>**color-scale** </font> image, use ```ModelColor.py``` or ```ModelEnsemble.py``` scripts:
+
+These two scripts train the Neural Networks using the color-scale training images, and evaluates its learning using the color-scale testing dataset. 
+
+#### INPUTs are:
+
+```
+- The path to the directory that contains malware and goodware image folders.
+- The name of the directory where to save the model.
+```
+
+#### OUTPUTs are
+
+```
+- The file that contains Accuracy, Precision, Recall, and F1-score of the ten trained models
+  and their average scores.
+- The ten trained models.
+```
+
+#### Example:
+
+```bash
+python3 ModelColor.py -p "dataset_images" -d "results_dir"
+# or
+python3 ModelEnsemble.py -p "dataset_images" -d "results_dir"
+```
 
