@@ -42,7 +42,7 @@ CHANNELS = 3
 EPOCHS = 200
 BATCH_SIZE = 500
 IMG_SIZE = 128
-PATH_FILES = osp.join(path_images, "dex_splits")
+PATH_FILES = osp.join(path_images, "data_splits")
 IMAGE_TYPE = '.color.png'
 
 CLASS_NAMES = ['goodware', 'malware']

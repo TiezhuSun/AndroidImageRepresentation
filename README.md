@@ -37,7 +37,9 @@ python3 apk2images APK_PATH
 
 -  The evaluation is repeated 10 times using the holdout technique.
 -  The training, validation and test hashes are provided in `data_splits` directory.
--  To run the scripts blow, you need to extract the gray-scale images and color-scale images for goodware and malware applications in `goodware_hashes.txt` and `malware_hashes.txt` using the `apktoimages.py` script.
+-  To run the scripts blow, you need to 
+   -  Extract the gray-scale images and color-scale images for goodware and malware applications in `goodware_hashes.txt` and `malware_hashes.txt` using the `apk2images.py` script.
+   -  Then organize the directory structure as ``dataset.example``
 
 ### Model based on Gray-scale Image
 
