@@ -2,6 +2,9 @@
 
 This Repository is for Android Malware Detection based on Image Representation.
 
+For more technical details, please refer to our A-Mobile '21 paper:
+"Android Malware Detection: Looking beyond Dalvik Bytecode"
+
 ## Data Availability
 
 - Due to the large size of the APKs and Images, we share them upon request.
